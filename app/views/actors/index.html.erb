@@ -1,0 +1,16 @@
+<div class="container">
+  <%= @actors.each do |actor| %>
+    <%= image_tag actor.image_url %>
+    <%= actor.name %>
+    <%= actor.bio %>
+    <%= actor.birth_date %>
+    <%= actor.birth_place %>
+    <% if actor.alive %>
+      <br>
+    <% else %>
+      <%= actor.death_date %>
+      <%= actor.death_place %>
+      <br>
+    <% end %>
+  <% end %>
+</div>
