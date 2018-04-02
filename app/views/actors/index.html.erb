@@ -1,5 +1,5 @@
 <div class="container">
-  <%= @actors.each do |actor| %>
+  <% @actors.each do |actor| %>
     <%= image_tag actor.image_url %>
     <%= actor.name %>
     <%= actor.bio %>
@@ -13,4 +13,5 @@
       <br>
     <% end %>
   <% end %>
+  <%= link_to 'Crear Actor', new_actor_path %>
 </div>
